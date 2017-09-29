@@ -32,10 +32,10 @@
     <main class="page-main">
       <h1 class="page-main__title">Оставьте свой отзыв</h1>
         <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-        <section class="page-main__review">
+        <section class="review">
           <form method="post" action="https://echo.htmlacademy.ru">
-            <fieldset>
-              <legend>Представьтесь:</legend>
+            <fieldset class="review-block review__item">
+              <h2 class="review-block__caption">Представьтесь:</h2>
                 <label for="user-name">Имя*:</label>
                 <input type="text" id="user-name" name="user-name" placeholder="Петр" required>
                 <label for="user-surname">Фамилия*:</label>
@@ -43,50 +43,35 @@
                 <label for="user-patronymic">Отчество:</label>
                 <input type="text" id="user-patronymic" name="user-patronymic" placeholder="Александрович">
             </fieldset>
-            <fieldset>
-              <legend>Контактная информация:</legend>
-              <label for="tel">Контактный телефон*:</label>
-              <input type="tel" name="tel" required>
-              <label for="email">Электронная почта*:</label>
-              <input type="email" name="email" required>
+            <fieldset class="review-block review__item">
+              <h2 class="review-block__caption">Контактная информация:</h2>
+                <label for="tel">Контактный телефон*:</label>
+                <input type="tel" name="tel" required>
+                <label for="email">Электронная почта*:</label>
+                <input type="email" name="email" required>
             </fieldset>
-            <fieldset>
-              <legend>Ваше общее впечатление:</legend>
-              <ul class="radiobuttons">
-                <li><input class="" type="radio" id="positive" name="impression" value="positive" checked>
-                  <label for="adaptive">Скорее положительное</label>
-                </li>
-                <li><input class="" type="radio" id="negative" name="impression" value="negative">
-                  <label for="fixed">Скорее отрицательное</label>
-                </li>
-                <li><input class="" type="radio" id="difficulty" name="impression" value="difficult to answer">
-                  <label for="rubber">Затрудняюсь ответить</label>
-                </li>
-              </ul>
+            <fieldset class="review-block review__item">
+              <h2 class="review-block__caption">Ваше впечатление:</h2>
+                <input class="review-block__radio" type="radio" id="positive" name="impression" value="positive" checked>
+                <label for="adaptive">Скорее положительное</label>
+                <input class="review-block__radio" type="radio" id="negative" name="impression" value="negative">
+                <label for="fixed">Скорее отрицательное</label>
+                <input class="review-block__radio" type="radio" id="difficulty" name="impression" value="difficult to answer">
+                <label for="rubber">Затрудняюсь ответить</label>
             </fieldset>
-            <fieldset>
-              <legend>Посещенные достопримечательности:</legend>
-                <ul class="checkbox">
-                  <li class="">
-                    <input class="" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
-                    <label for="devils-bridge">Мост Дьявола</label>
-                  </li>
-                  <li class="">
-                    <input class="" type="checkbox" id="slide-park" name="slide-park" >
-                    <label for="slide-park">Слайд-парк</label>
-                  </li>
-                  <li class="">
-                    <input class="" type="checkbox" id="mountain-bell" name="mountain-bell" checked>
-                    <label for="mountain-bell">Гора-Колокол</label>
-                  </li>
-                  <li class="">
-                    <input class="" type="checkbox" id="red-rocks" name="red-rocks">
-                    <label for="red-rocks">Красные скалы</label>
-                  </li>
-                </ul>
+            <fieldset class="review-block review__item">
+              <h2 class="review-block__caption">Посещенные достопримечательности:</h2>
+                <input class="review-block__checkbox" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
+                <label for="devils-bridge">Мост Дьявола</label>
+                <input class="review-block__checkbox" type="checkbox" id="slide-park" name="slide-park" >
+                <label for="slide-park">Слайд-парк</label>
+                <input class="review-block__checkbox" type="checkbox" id="mountain-bell" name="mountain-bell" checked>
+                <label for="mountain-bell">Гора-Колокол</label>
+                <input class="review-block__checkbox" type="checkbox" id="red-rocks" name="red-rocks">
+                <label for="red-rocks">Красные скалы</label>
             </fieldset>
-            <fieldset>
-              <label for="message">Опишите свои эмоции:</label>
+            <fieldset class="review-block review__item">
+              <h2 class="review-block__caption">Опишите свои эмоции:</h2>
               <textarea id="message" rows="4">Опишите подробно все свои восторги</textarea>
               <input type="submit" value="Отправить отзыв">
             </fieldset>
