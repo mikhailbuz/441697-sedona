@@ -33,34 +33,41 @@
       <h1 class="page-main__title">Оставьте свой отзыв</h1>
         <p>Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         <section class="review">
-          <form method="post" action="https://echo.htmlacademy.ru">
-            <fieldset class="review-block review__item">
-              <h2 class="review-block__caption">Представьтесь:</h2>
+          <form class="review__form" method="post" action="https://echo.htmlacademy.ru">
+            <fieldset class="review__item">
+              <legend class="review-block__caption">Представьтесь:</legend>
+              <div class="review-block">
                 <label for="user-name">Имя*:</label>
                 <input type="text" id="user-name" name="user-name" placeholder="Петр" required>
                 <label for="user-surname">Фамилия*:</label>
                 <input type="text" id="user-surname" name="user-surname" placeholder="Иванов" required>
                 <label for="user-patronymic">Отчество:</label>
                 <input type="text" id="user-patronymic" name="user-patronymic" placeholder="Александрович">
+              </div>
             </fieldset>
-            <fieldset class="review-block review__item">
-              <h2 class="review-block__caption">Контактная информация:</h2>
+            <fieldset class="review__item">
+              <legend class="review-block__caption">Контактная информация:</legend>
+              <div class="review-block">
                 <label for="tel">Контактный телефон*:</label>
                 <input type="tel" name="tel" required>
                 <label for="email">Электронная почта*:</label>
                 <input type="email" name="email" required>
+              </div>
             </fieldset>
-            <fieldset class="review-block review__item">
-              <h2 class="review-block__caption">Ваше впечатление:</h2>
+            <fieldset class="review__item">
+              <legend class="review-block__caption">Ваше впечатление:</legend>
+              <div class="review-block">
                 <input class="review-block__radio" type="radio" id="positive" name="impression" value="positive" checked>
                 <label for="adaptive">Скорее положительное</label>
                 <input class="review-block__radio" type="radio" id="negative" name="impression" value="negative">
                 <label for="fixed">Скорее отрицательное</label>
                 <input class="review-block__radio" type="radio" id="difficulty" name="impression" value="difficult to answer">
                 <label for="rubber">Затрудняюсь ответить</label>
+              </div>
             </fieldset>
-            <fieldset class="review-block review__item">
-              <h2 class="review-block__caption">Посещенные достопримечательности:</h2>
+            <fieldset class="review__item">
+              <legend class="review-block__caption">Посещенные достопримечательности:</legend>
+              <div class="review-block">
                 <input class="review-block__checkbox" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
                 <label for="devils-bridge">Мост Дьявола</label>
                 <input class="review-block__checkbox" type="checkbox" id="slide-park" name="slide-park" >
@@ -69,11 +76,14 @@
                 <label for="mountain-bell">Гора-Колокол</label>
                 <input class="review-block__checkbox" type="checkbox" id="red-rocks" name="red-rocks">
                 <label for="red-rocks">Красные скалы</label>
+              </div>
             </fieldset>
-            <fieldset class="review-block review__item">
-              <h2 class="review-block__caption">Опишите свои эмоции:</h2>
-              <textarea id="message" rows="4">Опишите подробно все свои восторги</textarea>
-              <input type="submit" value="Отправить отзыв">
+            <fieldset class="review__item">
+              <legend class="review-block__caption">Опишите свои эмоции:</legend>
+              <div class="review-block">
+                <textarea id="message" rows="4">Опишите подробно все свои восторги</textarea>
+                <input class="review__send" type="submit" value="Отправить отзыв">
+              </div>
             </fieldset>
           </form>
         </section>
