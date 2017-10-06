@@ -1,0 +1,46 @@
+.page-header {
+  width: @base-width;
+  text-transform: uppercase;
+  font-family: PT Sans;
+}
+
+.page-header__logo {}
+
+.main-nav {}
+
+.main-nav__toggle {}
+
+.main-nav__list {}
+
+.site-list {
+  padding: 0;
+}
+
+.site-list__item {
+  padding: 18px;
+  .background();
+  .title();
+  text-align: center;
+  color: @text-color;
+  line-height: 1.444;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+}
+
+.site-list__item a {
+  color: @text-color;
+  .title();
+  line-height: 1.444;
+}
+
+.site-list__item:last-child {
+  box-shadow: inset 0 -5px 2px -3px #6d97b1;
+}
+
+.page-header__welcome {
+  width: 320px;
+  height: 392px;
+  background-image: url("../img/bg-back-mobile@1x.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
