@@ -10,6 +10,10 @@
   padding: 20px;
 }
 
+.social__list {
+
+}
+
 .social__title {
   font-size: 21px;
   font-weight: bold;
@@ -17,8 +21,37 @@
   text-align: center;
 }
 
+.social__link {
+  display: inline-block;
+  width: 47px;
+  height: 48px;
+  margin-right: 6px;
+  background-color: @base-color;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.social__link svg {
+  fill: @text-color;
+}
+
 .copyright__text {
   padding-top: 40px;
   padding-bottom: 30px;
   text-align: center;
+}
+
+.copyright__link {
+  font-size: 0;
+  position: relative;
+}
+
+.copyright__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 38px;
+  background-image: url(../img/logo-htmlacademy.svg);
+  background-repeat: no-repeat;
 }
