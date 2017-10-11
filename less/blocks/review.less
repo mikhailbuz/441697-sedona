@@ -40,8 +40,8 @@
 }
 
 input {
-   .placeholder({
-      color: black;
+  .placeholder({
+    color: black;
 })
 }
 
@@ -61,4 +61,32 @@ input {
   border-style: none;
   text-transform: uppercase;
   .button();
+}
+
+@media (min-width: @tablet-width) {
+  .review__form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .review__wrapper:nth-child(1) {
+    width: 50%;
+    order: -1;
+  }
+  .review__wrapper:nth-child(3) {
+    width: 50%;
+    order: -2;
+  }
+  .review__contacts {
+    display: flex;
+
+  }
+  .review__contacts input {
+    width: 590px;
+  }
+  .review-block textarea {
+    width: 100%;
+  }
+  .review__send {
+    width: 324px;
+  }
 }
