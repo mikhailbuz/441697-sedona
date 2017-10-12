@@ -10,6 +10,13 @@
   text-align: center;
 }
 
+.page-footer__map {
+  width: 320px;
+  height: 350px;
+  background-image: url("../img/bg-map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
 .page-footer__wrapper {
     margin-top: 40px;
 }
@@ -105,5 +112,22 @@
   .copyright__link::after {
     top: -5px;
     left: 10px;
+  }
+  .page-footer__map {
+    width: @tablet-width;
+    height: 350px;
+    background-color: #cbe0a4;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    width: @desktop-width;
+  }
+  .page-footer__wrapper {
+    justify-content: space-around;
+  }
+  .page-footer__map {
+    width: @desktop-width;
   }
 }
