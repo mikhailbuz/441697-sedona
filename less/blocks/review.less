@@ -40,9 +40,9 @@
 }
 
 input {
-  .placeholder({
+  .placeholder ({
     color: black;
-})
+  })
 }
 
 .review__contacts label {
@@ -64,29 +64,57 @@ input {
 }
 
 @media (min-width: @tablet-width) {
+  .review {
+    padding: 0 60px;
+  }
   .review__form {
     display: flex;
     flex-wrap: wrap;
   }
+  .review__wrapper {
+    border-style: none;
+  }
   .review__wrapper:nth-child(1) {
     width: 50%;
-    order: -1;
+    border-left: 1px solid #e5e5e5;
   }
   .review__wrapper:nth-child(3) {
     width: 50%;
-    order: -2;
+    order: -1;
+  }
+  .review-block {
+    display: flex;
+    flex-direction: column;
+  }
+  .review-block__caption {
+    font-size: 21px;
+  }
+  .review-block__caption:nth-child(1) {
+    text-align: center;
   }
   .review__contacts {
-    display: flex;
-
+    margin: 0;
+    padding: 0;
   }
   .review__contacts input {
-    width: 590px;
+    width: 648px;
   }
-  .review-block textarea {
-    width: 100%;
+  .review__attraction {
+    margin: 0;
+    padding: 0;
+  }
+  .review__emotions {
+    margin: 0;
+    padding: 0;
+  }
+  .review__emotions textarea {
+    width: 648px;
+    padding: 60px 0;
   }
   .review__send {
     width: 324px;
+  }
+  .review__description {
+    display: block;
   }
 }
