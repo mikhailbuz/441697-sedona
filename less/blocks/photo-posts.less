@@ -15,3 +15,45 @@
 .photo-posts__author {
   text-transform: none;
 }
+
+@media (min-width: @tablet-width) {
+  .photo-posts {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 60px;
+  }
+  .photo-posts__post {
+    padding: 0;
+    border-style: none;
+    background-color: @input-color;
+  }
+  .photo-posts__photo {
+    width: 324px;
+    height: 268px;
+  }
+  .photo-posts__post:first-child .photo-posts__photo {
+    width: 648px;
+    height: 400px;
+  }
+  .photo-posts__post:last-child {
+    border-style: none;
+  }
+  .photo-posts__title,
+  .photo-posts__author,
+  .photo-posts__likes {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-posts {
+    padding: 0;
+  }
+  .photo-posts__post:first-child .photo-posts__photo {
+    width: 1200px;
+    height: 400px;
+  }
+  .photo-posts__photo {
+    width: 400px;
+  }
+}
