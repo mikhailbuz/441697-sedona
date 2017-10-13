@@ -100,6 +100,7 @@ input {
     width: 648px;
   }
   .review__attraction {
+    display: flex;
     margin: 0;
     padding: 0;
   }
@@ -116,5 +117,38 @@ input {
   }
   .review__description {
     display: block;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .review {
+    padding: 0 120px;
+  }
+  .review__wrapper legend {
+    padding-bottom: 60px;
+  }
+  .review-block {
+    display: flex;
+    flex-direction: row;
+  }
+  .review-block--name {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .review-block--impression {
+    flex-direction: column;
+  }
+  .review__contacts input {
+    width: 320px;
+  }
+  .review-block--emotions {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .review-block--emotions textarea {
+    width: 960px;
+  }
+  .review__send {
+    width: 480px;
   }
 }

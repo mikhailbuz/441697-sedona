@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimal-ui">
     <title>HTML Academy: Седона</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -45,7 +46,7 @@
             <div class="review__wrapper">
               <fieldset class="review__name">
                 <legend class="review-block__caption">Представьтесь:</legend>
-                <div class="review-block">
+                <div class="review-block review-block--name">
                   <label for="user-name">Имя*:</label>
                   <input type="text" id="user-name" name="user-name" placeholder="Петр" required>
                   <label for="user-surname">Фамилия*:</label>
@@ -58,7 +59,7 @@
             <div class="review__wrapper">
               <fieldset class="review__contacts">
                 <legend class="review-block__caption">Контактная информация:</legend>
-                <div class="review-block">
+                <div class="review-block review-block--contacts">
                   <label for="tel">Контактный телефон*:</label>
                   <input type="tel" name="tel" placeholder="Введите телефон" required>
                   <label for="email">Электронная почта*:</label>
@@ -69,7 +70,7 @@
             <div class="review__wrapper">
               <fieldset class="review__impression">
                 <legend class="review-block__caption">Ваше впечатление:</legend>
-                <div class="review-block">
+                <div class="review-block review-block--impression">
                   <input class="review-block__radio" type="radio" id="positive" name="impression" value="positive" checked>
                   <label for="adaptive">Скорее положительное</label>
                   <input class="review-block__radio" type="radio" id="negative" name="impression" value="negative">
@@ -82,7 +83,7 @@
             <div class="review__wrapper">
               <fieldset class="review__attraction">
                 <legend class="review-block__caption">Посещенные достопримечательности:</legend>
-                <div class="review-block">
+                <div class="review-block review-block--attraction">
                   <input class="review-block__checkbox" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
                   <label for="devils-bridge">Мост Дьявола</label>
                   <input class="review-block__checkbox" type="checkbox" id="slide-park" name="slide-park">
@@ -97,7 +98,7 @@
             <div class="review__wrapper">
               <fieldset class="review__emotions">
                 <legend class="review-block__caption">Опишите свои эмоции:</legend>
-                <div class="review-block">
+                <div class="review-block review-block--emotions">
                   <textarea id="message" rows="4">Опишите подробно все свои восторги</textarea>
                   <input class="review__send" type="submit" value="Отправить отзыв">
                   <p class="visually-hidden review__description">* - обязательные поля</p>
