@@ -4,7 +4,6 @@
   margin: 0 auto;
   width: @base-width;
   text-transform: uppercase;
-  font-family: PT Sans;
 }
 
 .page-header__logo {
@@ -90,11 +89,17 @@
 }
 
 .page-header__sedona {
+  display: flex;
+  justify-content: center;
   width: 320px;
   height: 160px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: 50% 95%;
   background-repeat: no-repeat;
+}
+
+.page-header__image {
+  margin-top: 52px;
 }
 
 @media (min-width: @tablet-width) {
@@ -142,8 +147,6 @@
     height: 353px;
   }
   .page-header__sedona {
-    display: flex;
-    justify-content: center;
     width: 100%;
   }
   .page-header__image {
@@ -169,6 +172,8 @@
     width: 400px;
   }
   .site-list__item {
+    padding-top: 20px;
+    padding-bottom: 22px;
     width: 140px;
     height: 56px;
     color: @black-color;
