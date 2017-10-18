@@ -43,47 +43,45 @@
         </div>
         <section class="review">
           <form class="review__form" method="post" action="https://echo.htmlacademy.ru">
-            <div class="review__wrapper">
               <fieldset class="review__name">
-                <legend class="review-block__caption">Представьтесь:</legend>
-                <div class="review-block review-block--name">
+                <legend class="review__caption">Представьтесь:</legend>
                   <label for="user-name">Имя*:</label>
                   <input type="text" id="user-name" name="user-name" placeholder="Петр" required>
-                  <label for="user-surname">Фамилия*:</label>
+                  <label for="user-surname">
+                    Фамилия*:</label>
                   <input type="text" id="user-surname" name="user-surname" placeholder="Иванов" required>
-                  <label for="user-patronymic">Отчество:</label>
+                  <label for="user-patronymic">
+                    Отчество:</label>
                   <input type="text" id="user-patronymic" name="user-patronymic" placeholder="Александрович">
-                </div>
               </fieldset>
-            </div>
-            <div class="review__wrapper">
               <fieldset class="review__contacts">
-                <legend class="review-block__caption">Контактная информация:</legend>
-                <div class="review-block review-block--contacts">
-                  <label for="tel">Контактный телефон*:</label>
-                  <input type="tel" name="tel" placeholder="Введите телефон" required>
-                  <label for="email">Электронная почта*:</label>
-                  <input type="email" name="email" placeholder="Введите e-mail" required>
-                </div>
+                <legend class="review__caption">Контактная информация:</legend>
+                  <label for="tel">
+                    <span>Контактный телефон*:</span>
+                    <input type="tel" name="tel" placeholder="Введите телефон" required>
+                  </label>
+                  <label for="email">
+                    <span>Электронная почта*:</span>
+                    <input type="email" name="email" placeholder="Введите e-mail" required>
+                  </label>
               </fieldset>
-            </div>
-            <div class="review__wrapper">
               <fieldset class="review__impression">
-                <legend class="review-block__caption">Ваше впечатление:</legend>
-                <div class="review-block review-block--impression">
-                  <input class="review-block__radio" type="radio" id="positive" name="impression" value="positive" checked>
-                  <label for="adaptive">Скорее положительное</label>
-                  <input class="review-block__radio" type="radio" id="negative" name="impression" value="negative">
-                  <label for="fixed">Скорее отрицательное</label>
-                  <input class="review-block__radio" type="radio" id="difficulty" name="impression" value="difficult to answer">
-                  <label for="rubber">Затрудняюсь ответить</label>
-                </div>
+                <legend class="review__caption">Ваше впечатление:</legend>
+                  <label for="positive">
+                    <input class="review-block__radio" type="radio" id="positive" name="impression" value="positive" checked>
+                    <span>Скорее положительное</span>
+                  </label>
+                  <label for="negative">
+                    <input class="review-block__radio" type="radio" id="negative" name="impression" value="negative">
+                    <span>Скорее отрицательное</span>
+                  </label>
+                  <label for="difficulty">
+                    <input class="review-block__radio" type="radio" id="difficulty" name="impression" value="difficulty">
+                    <span>Затрудняюсь ответить</span>
+                  </label>
               </fieldset>
-            </div>
-            <div class="review__wrapper">
               <fieldset class="review__attraction">
-                <legend class="review-block__caption">Посещенные достопримечательности:</legend>
-                <div class="review-block review-block--attraction">
+                <legend class="review__caption">Посещенные достопримечательности:</legend>
                   <input class="review-block__checkbox" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
                   <label for="devils-bridge">Мост Дьявола</label>
                   <input class="review-block__checkbox" type="checkbox" id="slide-park" name="slide-park" checked>
@@ -92,19 +90,13 @@
                   <label for="mountain-bell">Гора-Колокол</label>
                   <input class="review-block__checkbox" type="checkbox" id="red-rocks" name="red-rocks" checked>
                   <label for="red-rocks">Красные скалы</label>
-                </div>
               </fieldset>
-            </div>
-            <div class="review__wrapper">
               <fieldset class="review__emotions">
-                <legend class="review-block__caption">Опишите свои эмоции:</legend>
-                <div class="review-block review-block--emotions">
+                <legend class="review__caption">Опишите свои эмоции:</legend>
                   <textarea id="message" rows="4">Опишите подробно все свои восторги</textarea>
                   <input class="review__send" type="submit" value="Отправить отзыв">
                   <p class="visually-hidden review__description">* - обязательные поля</p>
-                </div>
               </fieldset>
-            </div>
           </form>
         </section>
     </main>
