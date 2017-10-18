@@ -45,14 +45,18 @@
           <form class="review__form" method="post" action="https://echo.htmlacademy.ru">
               <fieldset class="review__name">
                 <legend class="review__caption">Представьтесь:</legend>
-                  <label for="user-name">Имя*:</label>
-                  <input type="text" id="user-name" name="user-name" placeholder="Петр" required>
-                  <label for="user-surname">
-                    Фамилия*:</label>
-                  <input type="text" id="user-surname" name="user-surname" placeholder="Иванов" required>
+                  <label for="user-name">
+                    <span>Имя*:</span>
+                    <input type="text" id="user-name" name="user-name" placeholder="Петр" required>
+                    <label for="user-surname">
+                  </label>
+                    <span>Фамилия*:</span>
+                    <input type="text" id="user-surname" name="user-surname" placeholder="Иванов" required>
+                  </label>
                   <label for="user-patronymic">
-                    Отчество:</label>
-                  <input type="text" id="user-patronymic" name="user-patronymic" placeholder="Александрович">
+                    <span>Отчество:</span>
+                    <input type="text" id="user-patronymic" name="user-patronymic" placeholder="Александрович">
+                  </label>
               </fieldset>
               <fieldset class="review__contacts">
                 <legend class="review__caption">Контактная информация:</legend>
@@ -67,18 +71,12 @@
               </fieldset>
               <fieldset class="review__impression">
                 <legend class="review__caption">Ваше впечатление:</legend>
-                  <label for="positive">
-                    <input class="review-block__radio" type="radio" id="positive" name="impression" value="positive" checked>
-                    <span>Скорее положительное</span>
-                  </label>
-                  <label for="negative">
-                    <input class="review-block__radio" type="radio" id="negative" name="impression" value="negative">
-                    <span>Скорее отрицательное</span>
-                  </label>
-                  <label for="difficulty">
-                    <input class="review-block__radio" type="radio" id="difficulty" name="impression" value="difficulty">
-                    <span>Затрудняюсь ответить</span>
-                  </label>
+                  <input class="review-block__radio" type="radio" id="positive" name="impression" value="positive" checked>
+                  <label for="positive">Скорее положительное</label>
+                  <input class="review-block__radio" type="radio" id="negative" name="impression" value="negative">
+                  <label for="negative">Скорее отрицательное</label>
+                  <input class="review-block__radio" type="radio" id="difficulty" name="impression" value="difficulty">
+                  <label for="difficulty">Затрудняюсь ответить</label>
               </fieldset>
               <fieldset class="review__attraction">
                 <legend class="review__caption">Посещенные достопримечательности:</legend>
