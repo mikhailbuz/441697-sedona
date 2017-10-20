@@ -43,22 +43,22 @@
         </div>
         <section class="review">
           <form class="review__form" method="post" action="https://echo.htmlacademy.ru">
-              <fieldset class="review__name">
+              <fieldset class="review__form-group review__form-group--name">
                 <legend class="review__caption">Представьтесь:</legend>
-                  <label for="user-name">
-                    <span>Имя*:</span>
-                    <input type="text" id="user-name" name="user-name" placeholder="Петр" required>
-                    <label for="user-surname">
-                  </label>
-                    <span>Фамилия*:</span>
-                    <input type="text" id="user-surname" name="user-surname" placeholder="Иванов" required>
-                  </label>
-                  <label for="user-patronymic">
-                    <span>Отчество:</span>
-                    <input type="text" id="user-patronymic" name="user-patronymic" placeholder="Александрович">
-                  </label>
+                <label for="user-name">
+                  <span>Имя*:</span>
+                  <input type="text" id="user-name" name="user-name" placeholder="Петр" required>
+                </label>
+                <label for="user-surname">
+                  <span>Фамилия*:</span>
+                  <input type="text" id="user-surname" name="user-surname" placeholder="Иванов" required>
+                </label>
+                <label for="user-patronymic">
+                  <span>Отчество:</span>
+                  <input type="text" id="user-patronymic" name="user-patronymic" placeholder="Александрович">
+                </label>
               </fieldset>
-              <fieldset class="review__contacts">
+              <fieldset class="review__form-group review__form-group--contacts">
                 <legend class="review__caption">Контактная информация:</legend>
                   <label for="tel">
                     <span>Контактный телефон*:</span>
@@ -69,7 +69,7 @@
                     <input type="email" name="email" placeholder="Введите e-mail" required>
                   </label>
               </fieldset>
-              <fieldset class="review__impression">
+              <fieldset class="review__form-group review__form-group--impression">
                 <legend class="review__caption">Ваше впечатление:</legend>
                   <input class="review-block__radio" type="radio" id="positive" name="impression" value="positive" checked>
                   <label for="positive">Скорее положительное</label>
@@ -78,7 +78,7 @@
                   <input class="review-block__radio" type="radio" id="difficulty" name="impression" value="difficulty">
                   <label for="difficulty">Затрудняюсь ответить</label>
               </fieldset>
-              <fieldset class="review__attraction">
+              <fieldset class="review__form-group review__form-group--attraction">
                 <legend class="review__caption">Посещенные достопримечательности:</legend>
                   <input class="review-block__checkbox" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
                   <label for="devils-bridge">Мост Дьявола</label>
@@ -89,7 +89,7 @@
                   <input class="review-block__checkbox" type="checkbox" id="red-rocks" name="red-rocks" checked>
                   <label for="red-rocks">Красные скалы</label>
               </fieldset>
-              <fieldset class="review__emotions">
+              <fieldset class="review__form-group review__form-group--emotions">
                 <legend class="review__caption">Опишите свои эмоции:</legend>
                   <textarea id="message" rows="4">Опишите подробно все свои восторги</textarea>
                   <input class="review__send" type="submit" value="Отправить отзыв">
