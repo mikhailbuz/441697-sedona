@@ -24,7 +24,7 @@
 .photo-posts__likes::before {
   content: "";
   position: absolute;
-  left: 0px;
+  left: 0;
   width: 23px;
   height: 23px;
   background-image: url("../img/icon-like.svg");
@@ -37,22 +37,27 @@
     flex-wrap: wrap;
     padding: 0 60px;
   }
+
   .photo-posts__post {
     padding: 0;
     border-style: none;
     background-color: @input-color;
   }
+
   .photo-posts__photo {
     width: 324px;
     height: 268px;
   }
+
   .photo-posts__post:first-child .photo-posts__photo {
     width: 648px;
     height: 400px;
   }
+
   .photo-posts__post:last-child {
     border-style: none;
   }
+
   .photo-posts__title,
   .photo-posts__author {
     padding-left: 20px;
@@ -67,16 +72,20 @@
   .photo-posts {
     padding: 0;
   }
+
   .photo-posts__post {
     color: @text-color;
   }
+
   .photo-posts__post:first-child .photo-posts__photo {
     width: 1200px;
     height: 400px;
   }
+
   .photo-posts__photo {
     width: 400px;
   }
+
   .photo-posts__wrapper {
     position: relative;
     margin-top: -105px;
@@ -86,18 +95,22 @@
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.3);
   }
+
   .photo-posts__post:nth-child(2) {
     width: 400px;
   }
+
   .photo-posts__title {
     margin-top: 22px;
     margin-bottom: 14px;
     width: 100%;
   }
+
   .photo-posts__author {
     margin-top: 0;
     margin-bottom: 24px;
   }
+
   .photo-posts__likes {
     margin-top: -10px;
     margin-right: 31px;
