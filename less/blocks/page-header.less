@@ -4,7 +4,6 @@
   margin: 0 auto;
   width: @base-width;
   text-transform: uppercase;
-  font-family: PT Sans;
 }
 
 .page-header__logo {
@@ -90,6 +89,8 @@
 }
 
 .page-header__sedona {
+  display: flex;
+  justify-content: center;
   width: 320px;
   height: 160px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
@@ -97,21 +98,29 @@
   background-repeat: no-repeat;
 }
 
+.page-header__image {
+  margin-top: 52px;
+}
+
 @media (min-width: @tablet-width) {
   .page-header {
     width: @tablet-width;
   }
+
   .page-header__logo {
     top: 0;
   }
+
   .main-nav__wrapper {
     display: flex;
     justify-content: space-between;
   }
+
   .main-nav__list {
     display: flex;
     width: 280px;
   }
+
   .site-list__item {
     width: 140px;
     color: @black-color;
@@ -119,16 +128,20 @@
     border: none;
     background-color: @text-color;
   }
+
   .site-list__item a {
     font-size: 14px;
     color: @black-color;
   }
+
   .site-list__item:last-child {
     box-shadow: none;
   }
+
   .main-nav__toggle {
     display: none;
   }
+
   .page-header__welcome {
     width: @tablet-width;
     height: 521px;
@@ -137,15 +150,16 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
   .page-header__welcome-text {
     width: 466px;
     height: 353px;
   }
+
   .page-header__sedona {
-    display: flex;
-    justify-content: center;
     width: 100%;
   }
+
   .page-header__image {
     width: 462px;
     height: 178px;
@@ -156,19 +170,25 @@
   .page-header {
     width: @desktop-width;
   }
+
   .page-header__logo {
     top: 0;
   }
+
   .main-nav__wrapper {
     display: flex;
     justify-content: space-between;
   }
+
   .main-nav__list {
     display: flex;
     justify-content: space-around;
     width: 400px;
   }
+
   .site-list__item {
+    padding-top: 20px;
+    padding-bottom: 22px;
     width: 140px;
     height: 56px;
     color: @black-color;
@@ -176,16 +196,20 @@
     border: none;
     background-color: @text-color;
   }
+
   .site-list__item a {
     font-size: 14px;
     color: @black-color;
   }
+
   .site-list__item:last-child {
     box-shadow: none;
   }
+
   .main-nav__toggle {
     display: none;
   }
+
   .page-header__welcome {
     width: @desktop-width;
     height: 521px;
@@ -194,10 +218,12 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
   .page-header__welcome-text {
     width: 592px;
     height: 431px;
   }
+
   .page-header__sedona {
     width: @desktop-width;
     height: 290px;
@@ -206,6 +232,7 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
   .page-header__image {
     width: 462px;
     height: 178px;

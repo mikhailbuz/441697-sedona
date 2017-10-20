@@ -2,54 +2,185 @@
   text-transform: uppercase;
 }
 
-.review__wrapper {
-  border-top: 1px solid #e5e5e5;
-}
-
-.review-block__caption {
-  .title();
-  padding-top: 20px;
+.review__caption {
+  padding-top: 24px;
+  padding-bottom: 30px;
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
 }
 
-.review__name,
-.review__contacts,
-.review__emotions {
-  .review-text();
+.review__form-group {
+  position: relative;
+  padding: 0 20px;
+  border-style: none;
+}
+.review__form-group::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 1px;
+  background-color: #e5e5e5;
 }
 
-.review__impression,
-.review__attraction {
-  .review-value();
+.review__form-group--name label {
+  display: flex;
+  justify-content: space-between;
 }
 
-.review__name input {
+.review__form-group--name input {
   margin-bottom: 21px;
   .review-input();
   width: 60%;
   height: 59px;
 }
 
-.review__name input:first-of-type {
+.review__form-group--name input:first-child {
   width: 72%;
 }
 
-.review__contacts input {
+.review__form-group--impression {
+  display: flex;
+}
+
+.review__form-group--impression label {
+  position: relative;
+  margin-bottom: 50px;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-left: 65px;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 18px;
+}
+
+.review__form-group--impression label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  background-color: @input-color;
+}
+
+.review__form-group--impression label::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  background-color: #333333;
+}
+
+.review__form-group--impression input[type=radio] {
+  display: none;
+}
+
+.review__form-group--impression input[type=radio]:checked + label::after {
+  display: block;
+}
+
+.review__form-group--contacts span {
+  margin-bottom: 15px;
+}
+
+.review__form-group--contacts input {
   .review-input();
-  height: 59px;
+  width: 222px;
+  height: 58px;
 }
 
-input {
-  .placeholder ({
-    color: black;
-  })
-}
-
-.review__contacts label {
+.review__form-group--contacts label {
   padding-top: 10px;
+  position: relative;
 }
 
-.review__emotions textarea {
+.review__form-group--contacts label:first-of-type::after {
+  content: "";
+  position: absolute;
+  top: 29px;
+  left: 222px;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.review__form-group--contacts label:nth-of-type(2)::after {
+  content: "";
+  position: absolute;
+  top: 29px;
+  left: 222px;
+  z-index: 1;
+  width: 58px;
+  height: 58px;
+  background-color: #e6e6e6;
+  background-image: url("../img/icon-mail.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.review__form-group--attraction label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-top: 15px;
+  padding-left: 65px;
+  margin-bottom: 65px;
+  font-weight: bold;
+  text-transform: none;
+  font-size: 18px;
+}
+
+.review__form-group--attraction label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 5px;
+  background-color: @input-color;
+}
+
+.review__form-group--attraction label::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 58px;
+  height: 58px;
+  border-radius: 5px;
+  background-color: @input-color;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.review__form-group--attraction input[type=checkbox] {
+  display: none;
+}
+
+.review__form-group--attraction input[type=checkbox]:checked + label::before {
+  display: none;
+}
+
+.review__form-group--attraction input[type=checkbox]:checked + label::after {
+  display: block;
+}
+
+.review__form-group--emotions textarea {
   .review-input();
   padding-right: 20px;
   width: 280px;
@@ -67,56 +198,101 @@ input {
   .review {
     padding: 0 60px;
   }
+
   .review__form {
     display: flex;
     flex-wrap: wrap;
   }
-  .review__wrapper {
+
+  .review__form-group {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .review__form-group::before {
+    display: none;
+  }
+
+  .review__form-group--name {
+    display: flex;
+    padding: 0;
+    width: 323px;
     border-style: none;
   }
-  .review__wrapper:nth-child(1) {
-    width: 50%;
-    border-left: 1px solid #e5e5e5;
+
+  .review__form-group--name span {
+    margin-left: 57px;
+    padding-top: 20px;
   }
-  .review__wrapper:nth-child(3) {
-    width: 50%;
-    order: -1;
+
+  .review__form-group--name input {
+    width: 180px;
   }
-  .review-block {
+
+  .review__form-group--impression {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    width: 324px;
+    order: -1;
+    border-style: none;
+    border-right: 1px solid #e5e5e5;
   }
-  .review-block__caption {
+
+  .review__caption {
+    width: 323px;
     font-size: 21px;
-  }
-  .review-block__caption:nth-child(1) {
     text-align: center;
   }
-  .review__contacts {
+
+  .review__form-group--contacts {
     margin: 0;
     padding: 0;
   }
-  .review__contacts input {
+
+  .review__form-group--contacts input {
     width: 648px;
   }
-  .review__attraction {
+
+  .review__form-group--contacts label:first-of-type::after,
+  .review__form-group--contacts label:nth-of-type(2)::after {
+    left: 598px;
+  }
+
+  .review__form-group--attraction {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 0;
+    width: 100%;
+  }
+
+  .review__form-group--attraction label {
+    margin: 0 0 70px 0;
+    padding: 15px 0 0 65px;
+    width: 200px;
+  }
+
+  .review__form-group--emotions {
     margin: 0;
     padding: 0;
   }
-  .review__emotions {
-    margin: 0;
-    padding: 0;
-  }
-  .review__emotions textarea {
+
+  .review__form-group--emotions textarea {
     width: 648px;
     padding: 60px 0;
   }
+
   .review__send {
+    padding: 0;
     width: 324px;
   }
+
   .review__description {
     display: block;
+    margin-left: auto;
+    margin-top: -40px;
+    width: 169px;
   }
 }
 
@@ -124,30 +300,56 @@ input {
   .review {
     padding: 0 120px;
   }
-  .review__wrapper legend {
-    padding-bottom: 60px;
+
+  .review__form-group--name,
+  .review__form-group--impression {
+    width: 480px;
   }
-  .review-block {
+
+  .review__form-group--impression .review__caption,
+  .review__form-group--name .review__caption,
+  .review__form-group--emotions .review__caption {
+    padding-bottom: 63px;
+  }
+
+  .review__form-group--attraction .review__caption {
+    padding-bottom: 46px;
+  }
+
+  .review__form-group--attraction {
     display: flex;
-    flex-direction: row;
+    width: @desktop-width;
   }
-  .review-block--name {
-    display: flex;
-    flex-wrap: wrap;
+
+  .review__form-group--attraction label {
+    margin-right: 0;
+    width: 300px;
   }
-  .review-block--impression {
+
+  .review__form-group--impression {
     flex-direction: column;
   }
-  .review__contacts input {
+
+
+  .review__form-group--contacts input {
     width: 320px;
   }
-  .review-block--emotions {
+
+  .review__form-group--contacts label:first-of-type::after,
+  .review__form-group--contacts label:nth-of-type(2)::after {
+    top: -10px;
+    left: 428px;
+  }
+
+  .review__form-group--emotions {
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .review-block--emotions textarea {
+
+  .review__form-group--emotions textarea {
     width: 960px;
   }
+
   .review__send {
     width: 480px;
   }
