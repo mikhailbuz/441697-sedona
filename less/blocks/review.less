@@ -26,14 +26,13 @@
 }
 
 .review__form-group--name label {
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 56px;
 }
 
 .review__form-group--name input {
   margin-bottom: 21px;
   .review-input();
-  width: 60%;
   height: 59px;
 }
 
@@ -42,18 +41,20 @@
 }
 
 .review__form-group--impression {
-  display: flex;
+  padding-bottom: 14px;
 }
 
 .review__form-group--impression label {
+  display: block;
   position: relative;
-  margin-bottom: 50px;
-  cursor: pointer;
+  margin-bottom: 14px;
   padding-top: 15px;
   padding-left: 65px;
+  padding-bottom: 15px;
   font-weight: bold;
   text-transform: none;
   font-size: 18px;
+  cursor: pointer;
 }
 
 .review__form-group--impression label::before {
@@ -93,6 +94,7 @@
 
 .review__form-group--contacts input {
   .review-input();
+  margin-bottom: 30px;
   width: 222px;
   height: 58px;
 }
@@ -128,6 +130,14 @@
   background-image: url("../img/icon-mail.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
+}
+
+.review__hidden-phone {
+  display: none;
+}
+
+.review__attraction-list {
+  padding: 0;
 }
 
 .review__form-group--attraction label {
@@ -213,7 +223,6 @@
   }
 
   .review__form-group--name {
-    display: flex;
     padding: 0;
     width: 323px;
     border-style: none;
@@ -229,14 +238,17 @@
   }
 
   .review__form-group--impression {
-    display: flex;
-    flex-direction: row;
     margin: 0;
     padding: 0;
     width: 324px;
     order: -1;
     border-style: none;
     border-right: 1px solid #e5e5e5;
+  }
+
+  .review__form-group--impression label {
+    margin-right: 60px;
+    margin-bottom: 24px;
   }
 
   .review__caption {
@@ -259,10 +271,19 @@
     left: 598px;
   }
 
-  .review__form-group--attraction {
+  .review__attraction-list {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 518px;
+  }
+
+  .review__attraction-item:nth-child(3) {
+    order: 2;
+  }
+
+  .review__form-group--attraction {
     padding: 0;
     width: 100%;
   }
@@ -306,39 +327,67 @@
     width: 480px;
   }
 
+  .review__form-group--name label {
+    margin-left: 80px;
+  }
+
+  .review__form-group--name input {
+    width: 314px;
+  }
+
+  .review__form-group--name span {
+    margin: 0;
+    padding-right: 10px;
+  }
+
   .review__form-group--impression .review__caption,
   .review__form-group--name .review__caption,
   .review__form-group--emotions .review__caption {
     padding-bottom: 63px;
   }
 
+  .review__attraction-list {
+    width: 960px;
+    justify-content: space-between;
+  }
+
   .review__form-group--attraction .review__caption {
     padding-bottom: 46px;
   }
 
-  .review__form-group--attraction {
-    display: flex;
-    width: @desktop-width;
+  .review__form-group--impression label {
+    margin-right: 200px;
   }
 
-  .review__form-group--attraction label {
-    margin-right: 0;
-    width: 300px;
+  .review__form-group--contacts {
+    width: 960px;
   }
-
-  .review__form-group--impression {
-    flex-direction: column;
-  }
-
 
   .review__form-group--contacts input {
     width: 320px;
   }
 
-  .review__form-group--contacts label:first-of-type::after,
+  .review__form-group--contacts label:first-of-type::after {
+    top: -10px;
+    left: 345px;
+  }
+
   .review__form-group--contacts label:nth-of-type(2)::after {
     top: -10px;
-    left: 428px;
+    left: 415px;
+  }
+
+  .review__form-group--contacts label:nth-of-type(2) {
+    margin-left: 80px;
+  }
+
+  .review__phone {
+    display: none;
+  }
+
+  .review__hidden-phone {
+    display: inline-block;
+    width: 80px;
   }
 
   .review__form-group--emotions {

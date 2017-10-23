@@ -25,45 +25,30 @@
   text-align: center;
 }
 
-.advantages__picture-town {
-  width: 320px;
-  height: 260px;
-  background-image: url("../img/main-city-mobile@1x.jpg");
-  background-repeat: no-repeat;
-}
-
-.advantages__picture-bridge {
-  width: 320px;
-  height: 260px;
-  background-image: url("../img/main-bridge-mobile@1x.jpg");
-  background-repeat: no-repeat;
-}
-
-.advantages__features {
-  margin: 0;
-  padding: 25px 20px 40px 20px;
-  background-color: @text-color;
-  color: @black-color;
-}
-
-.features__item {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.features__title {
-  .title();
-}
-
-.features__item svg {
-  width: 42px;
-  height: 42px;
-  fill: @base-color;
-}
-
 .advantages__item--other {
+  position: relative;
   background-color: #eeeeee;
   padding: 30px;
+}
+
+.advantages__item--other:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 280px;
+  height: 1px;
+  background-color: #d6d6d6;
+}
+
+.advantages__item--other:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  top: 169px;
+  left: 20px;
+  width: 280px;
+  height: 1px;
+  background-color: #d6d6d6;
 }
 
 @media (min-width: @tablet-width) {
@@ -87,6 +72,10 @@
     font-size: 21px;
   }
 
+  .advantages__title--tourists {
+    width: 130px;
+  }
+
   .advantages__picture-town {
     width: 512px;
     height: 256px;
@@ -101,42 +90,6 @@
     background-color: #dd8869;
   }
 
-  .advantages__features {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  .features__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 66px;
-    width: 190px;
-    text-align: center;
-  }
-
-  .features__item--1 {
-    order: 1;
-  }
-
-  .features__item--2 {
-    order: 2;
-  }
-
-  .features__item--3 {
-    order: 3;
-  }
-
-  .features__title {
-    font-size: 21px;
-  }
-
-  .features__item svg {
-    width: 79px;
-    height: 79px;
-  }
-
   .advantages__wrapper--other {
     display: flex;
   }
@@ -146,7 +99,12 @@
     flex-direction: column;
     align-items: center;
     width: 256px;
+    padding: 50px 45px;
     border-style: none;
+  }
+  .advantages__item--other:nth-child(2)::after,
+  .advantages__item--other:nth-child(2)::before {
+    display: none;
   }
 }
 
@@ -156,19 +114,6 @@
     flex-direction: column;
     align-items: center;
     min-width: 400px;
-  }
-
-  .advantages__features {
-    padding: 63px 0 83px;
-  }
-
-  .features__item {
-    margin: 0;
-    width: 400px;
-  }
-
-  .features__description--width {
-    width: 260px;
   }
 
   .advantages__item--other {

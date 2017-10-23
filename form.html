@@ -47,7 +47,7 @@
                 <legend class="review__caption">Представьтесь:</legend>
                 <label for="user-name">
                   <span>Имя*:</span>
-                  <input type="text" id="user-name" name="user-name" placeholder="Петр" required>
+                  <input class="review__first-name" type="text" id="user-name" name="user-name" placeholder="Петр" required>
                 </label>
                 <label for="user-surname">
                   <span>Фамилия*:</span>
@@ -61,7 +61,8 @@
               <fieldset class="review__form-group review__form-group--contacts">
                 <legend class="review__caption">Контактная информация:</legend>
                   <label for="tel">
-                    <span>Контактный телефон*:</span>
+                    <span class="review__phone">Контактный телефон*:</span>
+                    <span class="review__hidden-phone">Телефон*:</span>
                     <input type="tel" name="tel" placeholder="Введите телефон" required>
                   </label>
                   <label for="email">
@@ -80,14 +81,24 @@
               </fieldset>
               <fieldset class="review__form-group review__form-group--attraction">
                 <legend class="review__caption">Посещенные достопримечательности:</legend>
-                  <input class="review-block__checkbox" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
-                  <label for="devils-bridge">Мост Дьявола</label>
-                  <input class="review-block__checkbox" type="checkbox" id="slide-park" name="slide-park" checked>
-                  <label for="slide-park">Слайд-парк</label>
-                  <input class="review-block__checkbox" type="checkbox" id="mountain-bell" name="mountain-bell">
-                  <label for="mountain-bell">Гора-Колокол</label>
-                  <input class="review-block__checkbox" type="checkbox" id="red-rocks" name="red-rocks" checked>
-                  <label for="red-rocks">Красные скалы</label>
+                  <ul class="review__attraction-list">
+                    <li class="review__attraction-item">
+                      <input class="review-block__checkbox" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
+                      <label for="devils-bridge">Мост Дьявола</label>
+                    </li>
+                    <li class="review__attraction-item">
+                      <input class="review-block__checkbox" type="checkbox" id="slide-park" name="slide-park" checked>
+                      <label for="slide-park">Слайд-парк</label>
+                    </li>
+                    <li class="review__attraction-item">
+                      <input class="review-block__checkbox" type="checkbox" id="mountain-bell" name="mountain-bell">
+                      <label for="mountain-bell">Гора-Колокол</label>
+                    </li>
+                    <li class="review__attraction-item">
+                      <input class="review-block__checkbox" type="checkbox" id="red-rocks" name="red-rocks" checked>
+                      <label for="red-rocks">Красные скалы</label>
+                    </li>
+                 </ul>
               </fieldset>
               <fieldset class="review__form-group review__form-group--emotions">
                 <legend class="review__caption">Опишите свои эмоции:</legend>
