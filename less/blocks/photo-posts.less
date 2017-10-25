@@ -49,23 +49,43 @@
     height: 268px;
   }
 
+  .photo-posts__wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .photo-posts__title {
+    margin: 22px 0 0;
+    padding-left: 20px;
+    width: 100%;
+  }
+
   .photo-posts__post:first-child .photo-posts__photo {
     width: 648px;
     height: 400px;
+  }
+
+  .photo-posts__post:nth-child(2) {
+    width: 324px;
   }
 
   .photo-posts__post:last-child {
     border-style: none;
   }
 
-  .photo-posts__title,
   .photo-posts__author {
+    margin-bottom: 0;
     padding-left: 20px;
   }
 
   .photo-posts__likes {
+    padding-right: 16px;
     padding-left: 30px;
+    margin-bottom: 30px;
   }
+
 }
 
 @media (min-width: @desktop-width) {

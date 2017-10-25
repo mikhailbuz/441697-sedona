@@ -11,31 +11,71 @@
   position: absolute;
   top: 224px;
   align-self: center;
+  z-index: 2;
 }
 
-.page-header__welcome {
+.main-nav {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 320px;
-  height: 392px;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  flex-direction: column-reverse;
 }
 
-.page-header__sedona {
-  display: flex;
-  justify-content: center;
-  width: 320px;
-  height: 160px;
-  background-image: url("../img/bg-back-mobile@1x.jpg");
-  background-position: 50% 95%;
-  background-repeat: no-repeat;
+.main-nav__wrapper,
+.site-list {
+  padding: 0;
+  margin: 0;
 }
 
-.page-header__image {
-  margin-top: 52px;
+.site-list__item {
+  padding-top: 12px;
+  height: 56px;
+  .background();
+  .title();
+  text-align: center;
+  color: @text-color;
+  line-height: 1.444;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+}
+
+.site-list__item a {
+  color: @text-color;
+  .title();
+  line-height: 1.444;
+}
+
+.site-list__item--last {
+  box-shadow: inset 0 -5px 2px -3px #6d97b1;
+}
+
+.main-nav__toggle {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 20px;
+  align-self: flex-end;
+  display: block;
+  width: 23px;
+  height: 4px;
+  background-color: @base-color;
+  font-size: 0;
+  border-style: none;
+  cursor: pointer;
+}
+
+.main-nav__toggle::before,
+.main-nav__toggle::after {
+  content: "";
+  display: block;
+  width: 23px;
+  height: 4px;
+  background-color: @base-color;
+}
+
+.main-nav__toggle::before {
+  transform: translate(-6px, -10px);
+}
+
+.main-nav__toggle::after {
+  transform: translate(-6px, 4px);
 }
 
 @media (min-width: @tablet-width) {
@@ -47,39 +87,35 @@
     top: 0;
   }
 
-  .page-header__welcome {
-    width: 100%;
-    height: 521px;
-    background-color: #e2eff7;
-    background-image: url("../img/bg-back-tablet@1x.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
-      background-size: 1338px auto;
-   }
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 
-  .page-header__welcome-text {
-    width: 466px;
-    height: 353px;
+  .main-nav__list {
+    display: flex;
+    width: 280px;
   }
 
-  .page-header__sedona {
-    width: 100%;
+  .site-list__item {
+    width: 140px;
+    color: @black-color;
+    font-size: 14px;
+    border: none;
+    background-color: @text-color;
   }
 
-  .page-header__image {
-    width: 462px;
-    height: 178px;
+  .site-list__item a {
+    font-size: 14px;
+    color: @black-color;
   }
-}
 
-@media (min-width: 768px) and (min-resolution: 144dpi),
-       (min-width: 768px) and (min-resolution: 1.5dppx) {
-  .page-header__welcome {
-    background-image: url("../img/bg-back-tablet@2x.jpg");
-    background-size: 1338px auto;
+  .site-list__item:last-child {
+    box-shadow: none;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }
 
@@ -92,43 +128,38 @@
     top: 0;
   }
 
-  .page-header__welcome {
-    width: @desktop-width;
-    height: 521px;
-    background-color: #e2eff7;
-    background-image: url("../img/bg-back-desktop@1x.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/bg-back-tablet@2x.jpg");
-      background-size: 2400px auto;
-   }
+  .main-nav__wrapper {
+    display: flex;
+    justify-content: space-between;
   }
 
-  .page-header__welcome-text {
-    width: 592px;
-    height: 431px;
+  .main-nav__list {
+    display: flex;
+    justify-content: space-around;
+    width: 400px;
   }
 
-  .page-header__sedona {
-    width: @desktop-width;
-    height: 290px;
-    background-color: #e2eff7;
-    background-image: url("");
-    background-position: center;
-    background-repeat: no-repeat;
+  .site-list__item {
+    padding-top: 20px;
+    padding-bottom: 22px;
+    width: 140px;
+    height: 56px;
+    color: @black-color;
+    font-size: 14px;
+    border: none;
+    background-color: @text-color;
   }
 
-  .page-header__image {
-    width: 462px;
-    height: 178px;
+  .site-list__item a {
+    font-size: 14px;
+    color: @black-color;
   }
-}
 
-@media (min-width: 1200px) and (min-resolution: 144dpi),
-       (min-width: 1200px) and (min-resolution: 1.5dppx) {
-  .page-header__welcome {
-    background-image: url("../img/bg-back-desktop@2x.jpg");
-    background-size: 2400px auto;
+  .site-list__item:last-child {
+    box-shadow: none;
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }

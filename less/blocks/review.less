@@ -26,18 +26,21 @@
 }
 
 .review__form-group--name label {
+  margin-bottom: 20px;
   width: 100%;
-  margin-bottom: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
 
 .review__form-group--name input {
-  margin-bottom: 21px;
   .review-input();
   height: 59px;
+  width: 178px;
 }
 
-.review__form-group--name input:first-child {
-  width: 72%;
+.review__form-group--name input[name="user-name"] {
+  width: 229px;
 }
 
 .review__form-group--impression {
@@ -229,7 +232,6 @@
   }
 
   .review__form-group--name span {
-    margin-left: 57px;
     padding-top: 20px;
   }
 
@@ -301,7 +303,7 @@
 
   .review__form-group--emotions textarea {
     width: 648px;
-    padding: 60px 0;
+    padding: 21px;
   }
 
   .review__send {
@@ -322,17 +324,21 @@
     padding: 0 120px;
   }
 
-  .review__form-group--name,
   .review__form-group--impression {
     width: 480px;
   }
 
-  .review__form-group--name label {
-    margin-left: 80px;
+  .review__form-group--name {
+    padding-left: 80px;
+    width: 480px;
   }
 
   .review__form-group--name input {
     width: 314px;
+  }
+
+  .review__form-group--name input[name="user-name"] {
+    width: 350px;
   }
 
   .review__form-group--name span {
@@ -349,6 +355,10 @@
   .review__attraction-list {
     width: 960px;
     justify-content: space-between;
+  }
+
+  .review__attraction-item:last-child {
+    align-self: flex-start;
   }
 
   .review__form-group--attraction .review__caption {
@@ -397,6 +407,7 @@
 
   .review__form-group--emotions textarea {
     width: 960px;
+    padding: 21px;
   }
 
   .review__send {
