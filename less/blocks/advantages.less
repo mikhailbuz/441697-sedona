@@ -212,6 +212,7 @@
     flex-direction: column;
     align-items: center;
     min-width: 400px;
+    padding-top: 50px;
   }
 
   .advantages__item--other {
@@ -225,7 +226,7 @@
   }
 
   .advantages__description {
-    width: 308px;
+    max-width: 280px;
   }
 
   .advantages__picture-town {
@@ -238,5 +239,29 @@
     width: 800px;
     height: 256px;
     background-image: url();
+  }
+
+  .advantages__number--main::before {
+    left: -13px;
+  }
+
+  .advantages__number--main::after {
+    left: 27px;
+  }
+
+  .advantages__number--other::before {
+    left: -16px;
+  }
+
+  .advantages__number--other::after {
+    left: 28px;
+  }
+
+  .advantages__item--other {
+    padding-top: 43px;
+  }
+
+  .advantages__item--other .advantages__description {
+    max-width: 300px;
   }
 }

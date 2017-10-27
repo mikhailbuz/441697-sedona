@@ -66,6 +66,7 @@
   .features__description {
     margin-top: 18px;
     padding: 0 45px;
+    max-width: 100%;
   }
 
   .features__item svg {
@@ -77,15 +78,20 @@
 
 @media (min-width: @desktop-width) {
   .features {
-    padding: 63px 0 83px;
+    // padding: 63px 0 83px;
   }
 
   .features__item {
     margin: 0;
     width: 400px;
+    height: 330px;
   }
 
   .features__description--width {
-    width: 260px;
+    max-width: 380px;
+  }
+
+  .features__item svg {
+    margin-bottom: 23px;
   }
 }
