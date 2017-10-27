@@ -3,8 +3,8 @@
 }
 
 .review__caption {
-  padding-top: 24px;
-  padding-bottom: 30px;
+  padding-top: 18px;
+  padding-bottom: 24px;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -12,7 +12,7 @@
 
 .review__form-group {
   position: relative;
-  padding: 0 20px;
+  padding: 0 20px 7px;
   border-style: none;
 }
 .review__form-group::before {
@@ -26,7 +26,7 @@
 }
 
 .review__form-group--name label {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -36,7 +36,7 @@
 .review__form-group--name input {
   .review-input();
   height: 59px;
-  width: 178px;
+  width: 191px;
 }
 
 .review__form-group--name input[name="user-name"] {
@@ -44,7 +44,7 @@
 }
 
 .review__form-group--impression {
-  padding-bottom: 14px;
+  padding-bottom: 15px;
 }
 
 .review__form-group--impression label {
@@ -52,7 +52,7 @@
   position: relative;
   margin-bottom: 14px;
   padding-top: 15px;
-  padding-left: 65px;
+  padding-left: 79px;
   padding-bottom: 15px;
   font-weight: bold;
   text-transform: none;
@@ -91,13 +91,18 @@
   display: block;
 }
 
+.review__form-group--contacts {
+  padding-bottom: 12px;
+}
+
 .review__form-group--contacts span {
-  margin-bottom: 15px;
+  padding-left: 21px;
 }
 
 .review__form-group--contacts input {
   .review-input();
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 16px;
   width: 222px;
   height: 58px;
 }
@@ -110,7 +115,7 @@
 .review__form-group--contacts label:first-of-type::after {
   content: "";
   position: absolute;
-  top: 29px;
+  top: 39px;
   left: 222px;
   z-index: 1;
   width: 58px;
@@ -124,7 +129,7 @@
 .review__form-group--contacts label:nth-of-type(2)::after {
   content: "";
   position: absolute;
-  top: 29px;
+  top: 39px;
   left: 222px;
   z-index: 1;
   width: 58px;
@@ -141,6 +146,15 @@
 
 .review__attraction-list {
   padding: 0;
+  margin: 0;
+}
+
+.review__form-group--attraction {
+  padding-bottom: 3px;
+}
+
+.review__form-group--attraction .review__caption {
+  padding-bottom: 18px;
 }
 
 .review__form-group--attraction label {
@@ -148,8 +162,8 @@
   position: relative;
   cursor: pointer;
   padding-top: 15px;
-  padding-left: 65px;
-  margin-bottom: 65px;
+  padding-left: 79px;
+  margin-bottom: 40px;
   font-weight: bold;
   text-transform: none;
   font-size: 18px;
@@ -193,15 +207,21 @@
   display: block;
 }
 
+.review__form-group--emotions .review__caption {
+  padding-bottom: 18px;
+}
+
 .review__form-group--emotions textarea {
   .review-input();
-  padding-right: 20px;
+  padding: 20px 0 20px 20px;
   width: 280px;
   height: 163px;
+  font-size: 18px;
 }
 
 .review__send {
-  margin-top: 50px;
+  margin-top: 45px;
+  margin-bottom: 32px;
   border-style: none;
   text-transform: uppercase;
   .button();
