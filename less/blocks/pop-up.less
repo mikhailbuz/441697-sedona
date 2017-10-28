@@ -13,6 +13,7 @@
   background-color: @text-color;
   z-index: 10;
 }
+
 //для открытия всплывающих окон
 // .pop-up-failure--show {
 //   display: flex;
@@ -51,7 +52,9 @@
   text-align: center;
 }
 
-.pop-up__button {
+.pop-up-failure__button {
+  margin-bottom: 35px;
+  width: 180px;
   height: 59px;
   color: @text-color;
   border-style: none;
@@ -63,16 +66,20 @@
   background-color: @base-color;
 }
 
-.pop-up__button--ok {
-  margin-bottom: 35px;
-  width: 180px;
-}
-
-.pop-up__button--close {
+.pop-up-success__button {
   width: 280px;
+  height: 59px;
+  color: @text-color;
+  border-style: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background-color: @base-color;
 }
 
-.pop-up__button-wrapper {
+.pop-up-success__wrapper {
   width: 320px;
   height: 98px;
   padding-left: 20px;
@@ -96,12 +103,11 @@
     width: 300px;
   }
 
-  .pop-up__button--ok {
+  .pop-up-failure__button {
     width: 272px;
   }
 
   .pop-up-success {
-    // left: calc(50%);
     width: 640px;
   }
 
@@ -113,7 +119,7 @@
     width: 440px;
   }
 
-  .pop-up__button-wrapper {
+  .pop-up-success__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -122,12 +128,11 @@
     height: 146px;
   }
 
-  .pop-up__button--close {
+  .pop-up-success__button {
     width: 458px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .pop-up-success {
-  }
+
 }

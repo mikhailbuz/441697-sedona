@@ -43,7 +43,7 @@
     <main class="page-main">
       <div class="page-main__form-wrapper">
         <h1 class="page-main__title page-main__title--form">Оставьте свой отзыв</h1>
-          <p class="page-main__description--form">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <p class="page-main__description-form">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
         <section class="review">
           <form class="review__form" method="post" action="https://echo.htmlacademy.ru">
@@ -76,30 +76,30 @@
               </fieldset>
               <fieldset class="review__form-group review__form-group--impression">
                 <legend class="review__caption">Ваше общее впечатление:</legend>
-                  <input class="review-block__radio" type="radio" id="positive" name="impression" value="positive" checked>
+                  <input class="review__radio" type="radio" id="positive" name="impression" value="positive" checked>
                   <label for="positive">Скорее положительное</label>
-                  <input class="review-block__radio" type="radio" id="negative" name="impression" value="negative">
+                  <input class="review__radio" type="radio" id="negative" name="impression" value="negative">
                   <label for="negative">Скорее отрицательное</label>
-                  <input class="review-block__radio" type="radio" id="difficulty" name="impression" value="difficulty">
+                  <input class="review__radio" type="radio" id="difficulty" name="impression" value="difficulty">
                   <label for="difficulty">Затрудняюсь ответить</label>
               </fieldset>
               <fieldset class="review__form-group review__form-group--attraction">
                 <legend class="review__caption">Посещенные достопримечательности:</legend>
                   <ul class="review__attraction-list">
                     <li class="review__attraction-item">
-                      <input class="review-block__checkbox" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
+                      <input class="review__checkbox" type="checkbox" id="devils-bridge" name="devils-bridge" checked>
                       <label for="devils-bridge">Мост Дьявола</label>
                     </li>
                     <li class="review__attraction-item">
-                      <input class="review-block__checkbox" type="checkbox" id="slide-park" name="slide-park" checked>
+                      <input class="review__checkbox" type="checkbox" id="slide-park" name="slide-park" checked>
                       <label for="slide-park">Слайд-парк</label>
                     </li>
                     <li class="review__attraction-item">
-                      <input class="review-block__checkbox" type="checkbox" id="mountain-bell" name="mountain-bell">
+                      <input class="review__checkbox" type="checkbox" id="mountain-bell" name="mountain-bell">
                       <label for="mountain-bell">Гора-Колокол</label>
                     </li>
                     <li class="review__attraction-item">
-                      <input class="review-block__checkbox" type="checkbox" id="red-rocks" name="red-rocks" checked>
+                      <input class="review__checkbox" type="checkbox" id="red-rocks" name="red-rocks" checked>
                       <label for="red-rocks">Красные скалы</label>
                     </li>
                  </ul>
@@ -108,14 +108,14 @@
                 <legend class="review__caption">Опишите свои эмоции:</legend>
                   <textarea id="message" rows="4">Опишите подробно все свои восторги</textarea>
                   <input class="review__send" type="submit" value="Отправить отзыв">
-                  <p class="visually-hidden review__description">* - обязательные поля</p>
+                  <p class="review__description-hidden">* - обязательные поля</p>
               </fieldset>
           </form>
         </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <b class="social__title">#visitsedona</b>
+        <b class="page-footer__social-title">#visitsedona</b>
           <ul class="page-footer__social social">
             <li class="social__item">
               <a class="social__link social__link--twitter" href="#">
@@ -147,21 +147,21 @@
             </li>
           </ul>
         <div class="page-footer__copyright">
-          <b class="copyright__text">Разработано</b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          <b class="page-footer__copyright-text">Разработано</b>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </div>
       </div>
     </footer>
     <section class="pop-up-failure pop-up-failure--show">
       <h2 class="pop-up-failure__title">Что-то пошло не так!</h2>
         <p class="pop-up-failure__description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-        <button class="pop-up__button pop-up__button--ok" type="button">Ok</button>
+        <button class="pop-up-failure__button" type="button">Ok</button>
     </section>
     <section class="pop-up-success pop-up-success--show">
       <h2 class="pop-up-success__title">Ваш отзыв отправлен!</h2>
         <p class="pop-up-success__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br>В ближайшее время мы опубликуем его на сайте.</p>
-        <div class="pop-up__button-wrapper">
-          <button class="pop-up__button pop-up__button--close" type="button">Закрыть окно</button>
+        <div class="pop-up-success__wrapper">
+          <button class="pop-up-success__button" type="button">Закрыть окно</button>
         </div>
     </section>
     <script src="js/picturefill.min.js"></script>

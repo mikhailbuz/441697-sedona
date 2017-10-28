@@ -2,6 +2,10 @@
   padding: 27px 0 50px;
 }
 
+.best-deals br {
+  display: none;
+}
+
 .best-deals--photo {
   padding-bottom: 44px;
 }
@@ -42,59 +46,6 @@
   .button()
 }
 
-.best-deal__video-preview {
-  display: block;
-}
-
-.best-deal__volume-scale {
-  position: relative;
-  margin-top: -47px;
-  margin-left: 20px;
-  width: 280px;
-  height: 47px;
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.best-deal__volume-scale::before {
-  content: "";
-  position: absolute;
-  top: 22px;
-  left: 22px;
-  width: 235px;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.best-deal__volume-scale::after {
-  content: "";
-  position: absolute;
-  top: 18.5px;
-  left: 58px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.best-deal__video-controls {
-  margin-left: 20px;
-  padding: 20px;
-  width: 280px;
-  height: 66px;
-  background-color: @input-color;
-}
-
-.best-deal__replay {
-  margin-right: 133px;
-}
-
-.best-deal__subtitles {
-  margin-right: 31px;
-}
-
 @media (min-width: @tablet-width) {
   .best-deals {
     display: flex;
@@ -122,36 +73,12 @@
     text-align: center;
   }
 
+  .best-deals__description--photo {
+    margin-bottom: 75px;
+  }
+
   .best-deals__button {
     margin: 0;
-  }
-
-  .best-deal__video {
-    width: 648px;
-    height: 500px;
-  }
-
-  .best-deal__video-preview {
-    width: 100%;
-  }
-
-  .best-deal__volume-scale {
-    margin: -92px 0 0;
-    width: 648px;
-    height: 92px;
-  }
-
-  .best-deal__volume-scale::before {
-    width: 389px;
-    top: 45px;
-  }
-
-  .best-deal__volume-scale::after {
-    top: 41px;
-  }
-
-  .best-deal__video-controls {
-    background: none;
   }
 }
 
@@ -163,27 +90,7 @@
     margin-bottom: 46px;
   }
 
-  .best-deal__video {
-    width: 800px;
-    height: 500px;
-  }
-
-  .best-deal__video-preview {
-    width: 100%;
-  }
-
-  .best-deal__volume-scale {
-    margin: -92px 0 0;
-    width: 800px;
-    height: 92px;
-  }
-
-  .best-deal__volume-scale::before {
-    width: 540px;
-    top: 45px;
-  }
-
-  .best-deal__volume-scale::after {
-    top: 41px;
+  .best-deals br {
+    display: inline;
   }
 }
