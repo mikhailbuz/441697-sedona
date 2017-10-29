@@ -11,13 +11,15 @@
   display: block;
   position: absolute;
   top: 224px;
-  left: calc(50%-50px);
+  left: 50%;
+  margin-left: -51px;
   z-index: 2;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
     width: @tablet-width;
+    position: relative;
   }
 
   .page-header__logo {
@@ -32,6 +34,7 @@
 
   .page-header__logo {
     top: 0;
+    margin-left: -93px;
   }
 
   .page-header__logo-image {

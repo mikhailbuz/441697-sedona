@@ -3,7 +3,8 @@
   display: none;
   flex-wrap: wrap;
   justify-content: center;
-  left: 0;
+  left: 50%;
+  margin-left: -160px;
   position: fixed;
   width: 320px;
   text-transform: uppercase;
@@ -15,13 +16,13 @@
 }
 
 //для открытия всплывающих окон
-// .pop-up-failure--show {
-//   display: flex;
-// }
-//
-// .pop-up-success--show {
-//   display: flex;
-// }
+.pop-up-failure--show {
+  display: flex;
+}
+
+.pop-up-success--show {
+  display: flex;
+}
 
 .pop-up-failure {
   top: 20%;
@@ -91,6 +92,8 @@
   .pop-up-failure {
     width: 400px;
     height: 350px;
+    left: 50%;
+    margin-left: -200px;
   }
 
   .pop-up-failure__title {
@@ -109,6 +112,7 @@
 
   .pop-up-success {
     width: 640px;
+    margin-left: -320px;
   }
 
   .pop-up-success__title {
@@ -131,8 +135,4 @@
   .pop-up-success__button {
     width: 458px;
   }
-}
-
-@media (min-width: @desktop-width) {
-
 }
