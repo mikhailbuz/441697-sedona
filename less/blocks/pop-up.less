@@ -1,9 +1,10 @@
 .pop-up-failure,
 .pop-up-success {
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   justify-content: center;
-  left: 0;
+  left: 50%;
+  margin-left: -160px;
   position: fixed;
   width: 320px;
   text-transform: uppercase;
@@ -12,6 +13,15 @@
   box-shadow: 0 15px 16px #e2e2e2;
   background-color: @text-color;
   z-index: 10;
+}
+
+//для открытия всплывающих окон
+.pop-up-failure--show {
+  display: flex;
+}
+
+.pop-up-success--show {
+  display: flex;
 }
 
 .pop-up-failure {
@@ -43,7 +53,9 @@
   text-align: center;
 }
 
-.pop-up__button {
+.pop-up-failure__button {
+  margin-bottom: 35px;
+  width: 180px;
   height: 59px;
   color: @text-color;
   border-style: none;
@@ -55,16 +67,20 @@
   background-color: @base-color;
 }
 
-.pop-up__button--ok {
-  margin-bottom: 35px;
-  width: 180px;
-}
-
-.pop-up__button--close {
+.pop-up-success__button {
   width: 280px;
+  height: 59px;
+  color: @text-color;
+  border-style: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background-color: @base-color;
 }
 
-.pop-up__button-wrapper {
+.pop-up-success__wrapper {
   width: 320px;
   height: 98px;
   padding-left: 20px;
@@ -76,6 +92,8 @@
   .pop-up-failure {
     width: 400px;
     height: 350px;
+    left: 50%;
+    margin-left: -200px;
   }
 
   .pop-up-failure__title {
@@ -88,13 +106,13 @@
     width: 300px;
   }
 
-  .pop-up__button--ok {
+  .pop-up-failure__button {
     width: 272px;
   }
 
   .pop-up-success {
-    // left: calc(50%);
     width: 640px;
+    margin-left: -320px;
   }
 
   .pop-up-success__title {
@@ -105,7 +123,7 @@
     width: 440px;
   }
 
-  .pop-up__button-wrapper {
+  .pop-up-success__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -114,12 +132,7 @@
     height: 146px;
   }
 
-  .pop-up__button--close {
+  .pop-up-success__button {
     width: 458px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .pop-up-success {
   }
 }

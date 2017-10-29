@@ -3,8 +3,8 @@
 }
 
 .review__caption {
-  padding-top: 24px;
-  padding-bottom: 30px;
+  padding-top: 18px;
+  padding-bottom: 24px;
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -12,7 +12,7 @@
 
 .review__form-group {
   position: relative;
-  padding: 0 20px;
+  padding: 0 20px 7px;
   border-style: none;
 }
 .review__form-group::before {
@@ -26,7 +26,7 @@
 }
 
 .review__form-group--name label {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -36,7 +36,7 @@
 .review__form-group--name input {
   .review-input();
   height: 59px;
-  width: 178px;
+  width: 191px;
 }
 
 .review__form-group--name input[name="user-name"] {
@@ -44,7 +44,7 @@
 }
 
 .review__form-group--impression {
-  padding-bottom: 14px;
+  padding-bottom: 15px;
 }
 
 .review__form-group--impression label {
@@ -52,7 +52,7 @@
   position: relative;
   margin-bottom: 14px;
   padding-top: 15px;
-  padding-left: 65px;
+  padding-left: 79px;
   padding-bottom: 15px;
   font-weight: bold;
   text-transform: none;
@@ -91,13 +91,18 @@
   display: block;
 }
 
+.review__form-group--contacts {
+  padding-bottom: 12px;
+}
+
 .review__form-group--contacts span {
-  margin-bottom: 15px;
+  padding-left: 21px;
 }
 
 .review__form-group--contacts input {
   .review-input();
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 16px;
   width: 222px;
   height: 58px;
 }
@@ -110,7 +115,7 @@
 .review__form-group--contacts label:first-of-type::after {
   content: "";
   position: absolute;
-  top: 29px;
+  top: 39px;
   left: 222px;
   z-index: 1;
   width: 58px;
@@ -124,7 +129,7 @@
 .review__form-group--contacts label:nth-of-type(2)::after {
   content: "";
   position: absolute;
-  top: 29px;
+  top: 39px;
   left: 222px;
   z-index: 1;
   width: 58px;
@@ -141,6 +146,15 @@
 
 .review__attraction-list {
   padding: 0;
+  margin: 0;
+}
+
+.review__form-group--attraction {
+  padding-bottom: 3px;
+}
+
+.review__form-group--attraction .review__caption {
+  padding-bottom: 18px;
 }
 
 .review__form-group--attraction label {
@@ -148,8 +162,8 @@
   position: relative;
   cursor: pointer;
   padding-top: 15px;
-  padding-left: 65px;
-  margin-bottom: 65px;
+  padding-left: 79px;
+  margin-bottom: 40px;
   font-weight: bold;
   text-transform: none;
   font-size: 18px;
@@ -193,18 +207,28 @@
   display: block;
 }
 
+.review__form-group--emotions .review__caption {
+  padding-bottom: 18px;
+}
+
 .review__form-group--emotions textarea {
   .review-input();
-  padding-right: 20px;
+  padding: 20px;
   width: 280px;
   height: 163px;
+  font-size: 18px;
 }
 
 .review__send {
-  margin-top: 50px;
+  margin-top: 45px;
+  margin-bottom: 32px;
   border-style: none;
   text-transform: uppercase;
   .button();
+}
+
+.review__description-hidden {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -215,6 +239,7 @@
   .review__form {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 38px;
   }
 
   .review__form-group {
@@ -227,13 +252,19 @@
 
   .review__form-group--name {
     padding: 0;
-    width: 323px;
+    width: 50%;
     border-style: none;
+  }
+
+  .review__form-group--name input[name="user-name"] {
+    width: 216px;
   }
 
   .review__form-group--name span {
     padding-top: 20px;
+    padding-left: 58px;
   }
+
 
   .review__form-group--name input {
     width: 180px;
@@ -242,15 +273,15 @@
   .review__form-group--impression {
     margin: 0;
     padding: 0;
-    width: 324px;
+    width: 50%;
     order: -1;
     border-style: none;
     border-right: 1px solid #e5e5e5;
   }
 
   .review__form-group--impression label {
-    margin-right: 60px;
-    margin-bottom: 24px;
+    margin-bottom: 23px;
+    padding-left: 75px;
   }
 
   .review__caption {
@@ -259,18 +290,45 @@
     text-align: center;
   }
 
+  .review__form-group--name .review__caption {
+    padding-left: 59px;
+    padding-bottom: 57px;
+    text-align: left;
+  }
+
+  .review__form-group--impression .review__caption {
+    padding-bottom: 56px;
+    text-align: left;
+    padding-top: 18px;
+  }
+
+  .review__form-group--contacts .review__caption {
+    padding-top: 24px;
+  }
+
+  .review__form-group--attraction .review__caption {
+    line-height: 1.3;
+    padding-top: 23px;
+    padding-bottom: 40px;
+  }
+
+  .review__form-group--emotions .review__caption {
+    margin-bottom: 36px;
+  }
+
   .review__form-group--contacts {
-    margin: 0;
+    margin: 23px 0 0;
     padding: 0;
   }
 
   .review__form-group--contacts input {
+    margin-bottom: 28px;
     width: 648px;
   }
 
   .review__form-group--contacts label:first-of-type::after,
   .review__form-group--contacts label:nth-of-type(2)::after {
-    left: 598px;
+    left: 590px;
   }
 
   .review__attraction-list {
@@ -281,8 +339,20 @@
     width: 518px;
   }
 
+  .review__attraction-item:nth-child(1) {
+    order: 1;
+  }
+
+  .review__attraction-item:nth-child(2) {
+    order: 3;
+  }
+
   .review__attraction-item:nth-child(3) {
     order: 2;
+  }
+
+  .review__attraction-item:nth-child(4) {
+    order: 4;
   }
 
   .review__form-group--attraction {
@@ -291,13 +361,13 @@
   }
 
   .review__form-group--attraction label {
-    margin: 0 0 70px 0;
-    padding: 15px 0 0 65px;
-    width: 200px;
+    margin: 0 0 48px 0;
+    padding: 15px 0 0 79px;
+    width: 201px;
   }
 
   .review__form-group--emotions {
-    margin: 0;
+    margin: 16px 0 30px;
     padding: 0;
   }
 
@@ -307,14 +377,15 @@
   }
 
   .review__send {
+    margin-top: 53px;
     padding: 0;
     width: 324px;
   }
 
-  .review__description {
+  .review__description-hidden {
     display: block;
     margin-left: auto;
-    margin-top: -40px;
+    margin-top: -65px;
     width: 169px;
   }
 }
@@ -329,7 +400,6 @@
   }
 
   .review__form-group--name {
-    padding-left: 80px;
     width: 480px;
   }
 
@@ -344,47 +414,71 @@
   .review__form-group--name span {
     margin: 0;
     padding-right: 10px;
+    padding-left: 80px;
   }
 
-  .review__form-group--impression .review__caption,
-  .review__form-group--name .review__caption,
-  .review__form-group--emotions .review__caption {
-    padding-bottom: 63px;
+  .review__form-group--impression .review__caption {
+    padding-left: 80px;
+    padding-bottom: 57px;
+    min-width: 100%;
+  }
+
+  .review__form-group--name .review__caption {
+    padding-left: 80px;
+    padding-bottom: 57px;
   }
 
   .review__attraction-list {
+    margin-top: 20px;
     width: 960px;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
-  .review__attraction-item:last-child {
-    align-self: flex-start;
+  .review__attraction-item:nth-child(1) {
+    margin-right: 58px;
+  }
+
+  .review__attraction-item:nth-child(2) {
+    margin-right: 39px;
+  }
+
+  .review__attraction-item:nth-child(3) {
+    margin-right: 57px;
+  }
+
+  .review__attraction-item:nth-child(4n) {
+    margin-right: 0;
   }
 
   .review__form-group--attraction .review__caption {
-    padding-bottom: 46px;
+    padding-top: 23px;
+    padding-bottom: 22px;
   }
 
   .review__form-group--impression label {
     margin-right: 200px;
+    padding-left: 78px;
   }
 
   .review__form-group--contacts {
     width: 960px;
   }
 
+  .review__form-group--contacts .review__caption {
+    margin-bottom: 37px;
+  }
   .review__form-group--contacts input {
-    width: 320px;
+    width: 315px;
   }
 
   .review__form-group--contacts label:first-of-type::after {
     top: -10px;
-    left: 345px;
+    left: 343px;
   }
 
   .review__form-group--contacts label:nth-of-type(2)::after {
     top: -10px;
-    left: 415px;
+    left: 417px;
   }
 
   .review__form-group--contacts label:nth-of-type(2) {
@@ -400,9 +494,20 @@
     width: 80px;
   }
 
+  .review__form-group--contacts span {
+    padding-left: 0;
+    padding-right: 10px;
+  }
+
   .review__form-group--emotions {
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 73px;
+  }
+
+  .review__form-group--emotions .review__caption {
+    margin-bottom: 38px;
   }
 
   .review__form-group--emotions textarea {
@@ -410,7 +515,13 @@
     padding: 21px;
   }
 
+  .review__description-hidden {
+    margin-top: -75px;
+  }
+
   .review__send {
     width: 480px;
+    margin-top: 50px;
+    margin-bottom: 38px;
   }
 }

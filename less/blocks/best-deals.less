@@ -1,8 +1,17 @@
 .best-deals {
-  padding: 30px 0 40px;
+  padding: 27px 0 50px;
+}
+
+.best-deals br {
+  display: none;
+}
+
+.best-deals--photo {
+  padding-bottom: 44px;
 }
 
 .best-deals__title {
+  margin: 0;
   padding-left: 20px;
   padding-right: 20px;
   font-size: 21px;
@@ -11,10 +20,23 @@
   text-align: center;
 }
 
+.best-deals__title--photo {
+  margin-top: 7px;
+  font-size: 18px;
+}
+
 .best-deals__description {
+  margin: 22px 0 35px;
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
+  line-height: 1.7;
+}
+
+.best-deals__description--photo {
+  margin-top: 30px;
+  margin-bottom: 37px;
+  padding: 0 25px;
 }
 
 .best-deals__button {
@@ -24,64 +46,17 @@
   .button()
 }
 
-.best-deal__video-preview {
-  display: block;
-}
-
-.best-deal__volume-scale {
-  position: relative;
-  margin-top: -47px;
-  margin-left: 20px;
-  width: 280px;
-  height: 47px;
-  z-index: 2;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.best-deal__volume-scale::before {
-  content: "";
-  position: absolute;
-  top: 22px;
-  left: 22px;
-  width: 235px;
-  height: 3px;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.best-deal__volume-scale::after {
-  content: "";
-  position: absolute;
-  top: 18.5px;
-  left: 58px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.best-deal__video-controls {
-  margin-left: 20px;
-  padding: 20px;
-  width: 280px;
-  height: 66px;
-  background-color: @input-color;
-}
-
-.best-deal__replay {
-  margin-right: 133px;
-}
-
-.best-deal__subtitles {
-  margin-right: 31px;
-}
-
 @media (min-width: @tablet-width) {
   .best-deals {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 46px;
+    padding-bottom: 55px;
+  }
+
+  .best-deals--photo {
+    padding-bottom: 40px;
   }
 
   .best-deals__title {
@@ -94,61 +69,49 @@
   }
 
   .best-deals__description {
-    width: 430px;
+    max-width: 460px;
     font-size: 14px;
+    margin-top: 28px;
+    margin-bottom: 42px;
+    padding: 0;
+    text-align: center;
   }
 
-  .best-deal__video {
-    width: 648px;
-    height: 500px;
+  .best-deals__description--photo {
+    margin-bottom: 73px;
   }
 
-  .best-deal__video-preview {
-    width: 100%;
+  .best-deals__title--photo {
+    margin-top: 13px;
   }
 
-  .best-deal__volume-scale {
-    margin: -92px 0 0;
-    width: 648px;
-    height: 92px;
-  }
-
-  .best-deal__volume-scale::before {
-    width: 389px;
-    top: 45px;
-  }
-
-  .best-deal__volume-scale::after {
-    top: 41px;
-  }
-
-  .best-deal__video-controls {
-    background: none;
+  .best-deals__button {
+    margin: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .best-deal__video {
-    width: 800px;
-    height: 500px;
+  .best-deals {
+    padding-bottom: 65px;
   }
 
-  .best-deal__video-preview {
-    width: 100%;
+  .best-deals--photo {
+    padding-bottom: 87px;
   }
 
-  .best-deal__volume-scale {
-    margin: -92px 0 0;
-    width: 800px;
-    height: 92px;
+  .best-deals__description {
+    margin-bottom: 46px;
   }
 
-  .best-deal__volume-scale::before {
-    width: 540px;
-    top: 45px;
+  .best-deals br {
+    display: inline;
   }
 
-  .best-deal__volume-scale::after {
-    top: 41px;
+  .best-deals__title--photo {
+    margin-top: 17px;
+  }
+
+  .best-deals__description--photo {
+    margin-bottom: 71px;
   }
 }
