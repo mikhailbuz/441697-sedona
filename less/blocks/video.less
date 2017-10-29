@@ -70,14 +70,35 @@
   .video__volume-scale::before {
     width: 389px;
     top: 45px;
+    left: 93px;
   }
 
   .video__volume-scale::after {
     top: 41px;
+    left: 206px;
   }
 
   .video__controls {
+    padding: 0;
+    margin-top: -55px;
+    margin-left: 0;
     background: none;
+    width: 648px;
+    z-index: 3;
+  }
+
+  svg path,
+  svg polygon {
+    fill: #ffffff;
+  }
+
+  .video__replay {
+    margin-left: 35px;
+    margin-right: 473px;
+  }
+
+  .video__fullscreen {
+    right: 38px;
   }
 }
 
@@ -104,5 +125,14 @@
 
   .video__volume-scale::after {
     top: 41px;
+  }
+
+  .video__controls {
+    width: 800px;
+  }
+
+  .video__replay {
+    margin-left: 35px;
+    margin-right: 623px;
   }
 }
