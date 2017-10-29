@@ -62,9 +62,11 @@
   }
 
   .video__volume-scale {
+    position: relative;
     margin: -92px 0 0;
     width: 648px;
     height: 92px;
+    z-index: 2;
   }
 
   .video__volume-scale::before {
@@ -79,6 +81,7 @@
   }
 
   .video__controls {
+    position: relative;
     padding: 0;
     margin-top: -55px;
     margin-left: 0;
@@ -114,9 +117,11 @@
   }
 
   .video__volume-scale {
+    position: relative;
     margin: -92px 0 0;
     width: 800px;
     height: 92px;
+    z-index: 2;
   }
 
   .video__volume-scale::before {
@@ -129,11 +134,17 @@
   }
 
   .video__controls {
+    position: relative;
     width: 800px;
+    z-index: 3;
   }
 
   .video__replay {
     margin-left: 35px;
-    margin-right: 623px;
+    margin-right: 618px;
+  }
+
+  .video__subtitles {
+    margin-right: 28px;
   }
 }

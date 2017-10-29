@@ -10,6 +10,19 @@
   text-align: center;
 }
 
+.page-footer__picture-map {
+  position: relative;
+}
+.page-footer__picture-map::before {
+  content: "";
+  width: 27px;
+  height: 27px;
+  position: absolute;
+  top: 161px;
+  left: 146px;
+  background-image: url("../img/icon-map-marker.svg");
+}
+
 .page-footer__wrapper {
     margin-top: 33px;
 }
@@ -26,6 +39,7 @@
   padding-top: 48px;
   padding-left: 15px;
   padding-bottom: 30px;
+  margin-left: 112px;
   text-align: center;
   font-weight: normal;
   font-size: 14px;
@@ -65,6 +79,7 @@
 
   .page-footer__copyright-text {
     padding: 0;
+    margin-left: 0;
   }
 
   .page-footer__copyright-link::after {
@@ -76,6 +91,11 @@
     width: @tablet-width;
     height: 350px;
     background-color: #cbe0a4;
+  }
+
+  .page-footer__picture-map::before {
+    top: 164px;
+    left: 370px;
   }
 }
 
@@ -92,6 +112,11 @@
 
   .page-footer__map {
     width: @desktop-width;
+  }
+
+  .page-footer__picture-map::before {
+    top: 162px;
+    left: 586px;
   }
 
   .page-footer__social-title {
