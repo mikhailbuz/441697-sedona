@@ -1147,7 +1147,7 @@ textarea {
         -ms-flex-align: center;
             align-items: center;
     width: 256px;
-    padding: 45px 45px 50px;
+    padding: 45px 45px 48px;
     border-style: none;
   }
   .advantages__item--other:nth-child(2)::after,
@@ -1160,6 +1160,9 @@ textarea {
   }
   .advantages__item--other br {
     display: inline;
+  }
+  .advantages__number--main {
+    margin-bottom: 26px;
   }
   .advantages__number--main::before {
     left: 83px;
@@ -1514,9 +1517,9 @@ textarea {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 36px;
     padding: 0 60px;
     width: 100%;
