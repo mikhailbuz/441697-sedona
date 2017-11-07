@@ -620,18 +620,30 @@ textarea {
     background-color: #ffffff;
     text-align: center;
   }
-  .site-list__item--active {
+  .site-list__item:hover a {
+    color: #81b3d2;
+  }
+  .site-list__item:active a {
+    color: #cacaca;
+  }
+  .site-list:nth-child(1) .site-list__item:nth-child(1) {
     padding-left: 15px;
   }
-  .site-list__item--photo {
+  .site-list:nth-child(1) .site-list__item:nth-child(2) {
     padding-left: 41px;
   }
-  .site-list__item--form {
+  .site-list:nth-child(2) .site-list__item:nth-child(1) {
     margin-left: -20px;
   }
   .site-list__item a {
     font-size: 14px;
     color: #000000;
+  }
+  .site-list__item--active a {
+    color: #766357;
+  }
+  .site-list__item--active:hover a {
+    color: #604e43;
   }
   .site-list__item:last-child {
     -webkit-box-shadow: none;
@@ -668,7 +680,7 @@ textarea {
     border: none;
     background-color: #ffffff;
   }
-  .site-list__item--form {
+  .site-list:nth-child(2) .site-list__item:nth-child(1) {
     margin-left: -29px;
   }
   .site-list__item a {
@@ -1256,6 +1268,12 @@ textarea {
   height: 38px;
   fill: #81b3d2;
 }
+.features__icon {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  fill: #81b3d2;
+}
 @media (min-width: 768px) {
   .features {
     display: -webkit-box;
@@ -1404,6 +1422,16 @@ textarea {
     margin: 0;
     width: 457px;
     height: 60px;
+  }
+  .best-deals__button:hover {
+    background-color: #669ec0;
+  }
+  .best-deals__button:active {
+    background-color: #5496bd;
+    color: #94b9d2;
+  }
+  .best-deals__button:disabled {
+    background-color: #e5e5e5;
   }
   .best-deals__description {
     max-width: 460px;
@@ -1590,6 +1618,15 @@ textarea {
 }
 .social__link svg {
   fill: #ffffff;
+}
+.social__link:hover {
+  background-color: #669ec0;
+}
+.social__link:active {
+  background-color: #5496bd;
+}
+.social__link:active svg {
+  fill: #94b9d2;
 }
 @media (min-width: 768px) {
   .social {
@@ -1945,6 +1982,13 @@ textarea {
   background-color: #f2f2f2;
   height: 59px;
   width: 191px;
+}
+.review__form-group--name input:hover {
+  background-color: #e5e5e5;
+}
+.review__form-group--name input:active {
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
 }
 .review__form-group--name input[name="user-name"] {
   width: 229px;

@@ -22,6 +22,18 @@
   fill: @text-color;
 }
 
+.social__link:hover {
+  background-color: @base-color-hover;
+}
+
+.social__link:active {
+  background-color: @base-color-active;
+}
+
+.social__link:active svg {
+  fill: @text-active-color;
+}
+
 @media (min-width: @tablet-width) {
   .social {
     display: flex;
