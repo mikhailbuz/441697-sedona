@@ -565,6 +565,15 @@ textarea {
   -webkit-box-shadow: inset 0 -5px 2px -3px #6d97b1;
           box-shadow: inset 0 -5px 2px -3px #6d97b1;
 }
+.site-list__item:hover {
+  background-color: #669ec0;
+}
+.site-list__item:active {
+  background-color: #5496bd;
+}
+.site-list__item:active a {
+  color: #94b9d2;
+}
 .main-nav__toggle {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -619,6 +628,9 @@ textarea {
     border: none;
     background-color: #ffffff;
     text-align: center;
+  }
+  .site-list__item:hover {
+    background-color: #ffffff;
   }
   .site-list__item:hover a {
     color: #81b3d2;
@@ -1397,6 +1409,16 @@ textarea {
   vertical-align: middle;
   background-color: #81b3d2;
 }
+.best-deals__button:hover {
+  background-color: #669ec0;
+}
+.best-deals__button:active {
+  background-color: #5496bd;
+  color: #94b9d2;
+}
+.best-deals__button:disabled {
+  background-color: #e5e5e5;
+}
 @media (min-width: 768px) {
   .best-deals {
     display: -webkit-box;
@@ -1422,16 +1444,6 @@ textarea {
     margin: 0;
     width: 457px;
     height: 60px;
-  }
-  .best-deals__button:hover {
-    background-color: #669ec0;
-  }
-  .best-deals__button:active {
-    background-color: #5496bd;
-    color: #94b9d2;
-  }
-  .best-deals__button:disabled {
-    background-color: #e5e5e5;
   }
   .best-deals__description {
     max-width: 460px;
@@ -1497,6 +1509,7 @@ textarea {
   top: 161px;
   left: 146px;
   background-image: url("../img/icon-map-marker.svg");
+  cursor: pointer;
 }
 .page-footer__wrapper {
   margin-top: 33px;
@@ -1842,6 +1855,7 @@ textarea {
   height: 10px;
   border-radius: 50%;
   background-color: #ffffff;
+  cursor: pointer;
 }
 .video__controls {
   margin-left: 20px;
@@ -1852,9 +1866,24 @@ textarea {
 }
 .video__replay {
   margin-right: 133px;
+  cursor: pointer;
 }
 .video__subtitles {
   margin-right: 31px;
+  cursor: pointer;
+}
+.video__fullscreen {
+  cursor: pointer;
+}
+.video__replay:hover path,
+.video__subtitles:hover path,
+.video__fullscreen:hover polygon {
+  fill: #333333;
+}
+.video__replay:active path,
+.video__subtitles:active path,
+.video__fullscreen:active polygon {
+  fill: #c1c1c1;
 }
 @media (min-width: 768px) {
   .video {
@@ -1983,7 +2012,8 @@ textarea {
   height: 59px;
   width: 191px;
 }
-.review__form-group--name input:hover {
+.review__form-group--name input:hover,
+.review__form-group--contacts input:hover {
   background-color: #e5e5e5;
 }
 .review__form-group--name input:active {
@@ -2018,6 +2048,16 @@ textarea {
   height: 58px;
   background-color: #f2f2f2;
 }
+.review__form-group--impression label:hover::before,
+.review__form-group--attraction label:hover::before,
+.review__form-group--attraction label:hover::after {
+  background-color: #e5e5e5;
+}
+.review__form-group--impression label:active::before,
+.review__form-group--attraction label:active::before,
+.review__form-group--attraction label:active::after {
+  background-color: #d5d5d5;
+}
 .review__form-group--impression label::after {
   content: "";
   display: none;
@@ -2028,6 +2068,9 @@ textarea {
   width: 24px;
   height: 24px;
   background-color: #333333;
+}
+.review__form-group--impression label:active::after {
+  background-color: #a4a4a4;
 }
 .review__form-group--impression input[type=radio] {
   display: none;
@@ -2165,6 +2208,13 @@ textarea {
   text-align: center;
   vertical-align: middle;
   background-color: #81b3d2;
+}
+.review__send:hover {
+  background-color: #669ec0;
+}
+.review__send:active {
+  background-color: #5496bd;
+  color: #94b9d2;
 }
 .review__description-hidden {
   display: none;

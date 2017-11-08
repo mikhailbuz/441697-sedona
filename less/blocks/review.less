@@ -40,7 +40,8 @@
   width: 191px;
 }
 
-.review__form-group--name input:hover {
+.review__form-group--name input:hover,
+.review__form-group--contacts input:hover {
   background-color: @input-color-hover;
 }
 
@@ -81,6 +82,18 @@
   background-color: @input-color;
 }
 
+.review__form-group--impression label:hover::before,
+.review__form-group--attraction label:hover::before,
+.review__form-group--attraction label:hover::after {
+  background-color: @input-color-hover;
+}
+
+.review__form-group--impression label:active::before,
+.review__form-group--attraction label:active::before,
+.review__form-group--attraction label:active::after {
+  background-color: @input-color-active;
+}
+
 .review__form-group--impression label::after {
   content: "";
   display: none;
@@ -91,6 +104,10 @@
   width: 24px;
   height: 24px;
   background-color: #333333;
+}
+
+.review__form-group--impression label:active::after {
+  background-color: #a4a4a4;
 }
 
 .review__form-group--impression input[type=radio] {
@@ -235,6 +252,15 @@
   border-style: none;
   text-transform: uppercase;
   .button();
+}
+
+.review__send:hover {
+  background-color: @base-color-hover;
+}
+
+.review__send:active {
+  background-color: @base-color-active;
+  color: @text-active-color;
 }
 
 .review__description-hidden {
