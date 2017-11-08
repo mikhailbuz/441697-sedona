@@ -33,6 +33,7 @@
   height: 10px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 1);
+  cursor: pointer;
 }
 
 .video__controls {
@@ -45,10 +46,28 @@
 
 .video__replay {
   margin-right: 133px;
+  cursor: pointer;
 }
 
 .video__subtitles {
   margin-right: 31px;
+  cursor: pointer;
+}
+
+.video__fullscreen {
+  cursor: pointer;
+}
+
+.video__replay:hover path,
+.video__subtitles:hover path,
+.video__fullscreen:hover polygon {
+  fill: #333333;
+}
+
+.video__replay:active path,
+.video__subtitles:active path,
+.video__fullscreen:active polygon {
+  fill: #c1c1c1;
 }
 
 @media (min-width: @tablet-width) {
