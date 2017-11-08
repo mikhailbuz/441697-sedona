@@ -41,13 +41,19 @@
 }
 
 .review__form-group--name input:hover,
-.review__form-group--contacts input:hover {
+.review__form-group--contacts input:hover,
+.review__form-group--emotions textarea:hover {
   background-color: @input-color-hover;
 }
 
-.review__form-group--name input:active {
+.review__form-group--name input:active,
+.review__form-group--name input:focus,
+.review__form-group--contacts input:active,
+.review__form-group--contacts input:focus,
+.review__form-group--emotions textarea:active,
+.review__form-group--emotions textarea:focus {
   background-color: @text-color;
-  border: 2px solid @input-color-hover;
+  outline: 2px solid @input-color-hover;
 }
 
 .review__form-group--name input[name="user-name"] {
